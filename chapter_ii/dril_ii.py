@@ -62,4 +62,12 @@ def drill_8(string):
     print(string.center(15, "*"))
     # rando = "*"
 
-drill_8("hello")
+# drill_8("hello")
+
+def drill_9(string): 
+    print(f'stripped: {string.strip()}')
+    print(f'lstripped: {string.lstrip()}')
+    print(f'rstripped: {string.rstrip()}')
+    print(f'stripsen: {string.strip("x")}')
+
+def dril_10(): 

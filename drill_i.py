@@ -41,7 +41,7 @@ def drill_3():
     "model":"civic",
     "year": "2022"
     }
-    for key, value in car_details: 
+    for key, value in car_details.items(): 
         print(f'key: {key} | value: {value} ')
 def drill_4(): 
     student_score = {'Alice': 85, 'Bob': 92, 'Charlie': 78}
@@ -96,4 +96,13 @@ def drill_8():
     dict_test = {"defa":"20", "akhdan":"30"}
     print(f'cataog: {catalog.append(dict_test)}')
 
-drill_8()
+def drill_10(): 
+    phonebook = {}
+    while True: 
+        input_name = input("name: ")
+        if input_name == "done" or input_name == "quit": 
+            print(f'current: {phonebook} ')
+            break
+        input_number = input("number: ")
+        phonebook.setdefault(input_name, input_number)
+    print(phonebook)
