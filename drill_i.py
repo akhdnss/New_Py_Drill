@@ -80,7 +80,20 @@ def drill_6():
     add_item(inv, usr_input_ii, usr_quantity_ii)
     print(f'inventory: {inv}')
 
-drill_6()
+def drill_7(): 
+    adress_book = {"Jane":{"phone":"555-1234", "email":"jane@email.com"}, "Mike":{"phone":"555-5678", "email":"mike@email.com"} }
+    #jane's email
+    val = adress_book.get("Jane")
+    email = adress_book["Jane"]["email"]
+    print(email)
+    #adding new key-value pair
+    adress_book["Mike"].setdefault("adress", "123 Main St")
+    print(f'updated: {adress_book}')
+# drill_7()
 
+def drill_8(): 
+    catalog = []
+    dict_test = {"defa":"20", "akhdan":"30"}
+    print(f'cataog: {catalog.append(dict_test)}')
 
-
+drill_8()
