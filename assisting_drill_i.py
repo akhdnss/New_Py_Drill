@@ -1,6 +1,9 @@
-catalog = []
-dict_test = {"defa":{"phone":555, "email":"@gmail.com"}, "akhdan":{"phone":666, "email":"@yahoo.com"}}
-
-catalog.append(dict_test)
-
-print(catalog.get("defa"))
+phonebook = {}
+while True: 
+    input_name = input("name: ")
+    if input_name == "done" or input_name == "quit": 
+        print(f'current: {phonebook} ')
+        break
+    input_number = input("number: ")
+    phonebook.setdefault(input_name, input_number)
+print(phonebook)
