@@ -1,0 +1,367 @@
+no, all 20 questions
+
+
+
+Alright, here is the complete documentation for all 20 drills, including the question, code, explanation, and output for each. You can copy and paste this directly.
+
+Drill Set 1: Single Character Matching
+Drill 1: Match a Literal
+
+Question: Match the character 'e'.
+
+Text: 'The cat in the hat.'
+
+Code:
+
+Python
+
+import re
+text = 'The cat in the hat.'
+result = re.findall(r'e', text)
+print(result)
+Explanation: The pattern r'e' matches the literal character 'e'.
+
+Output: ['e', 'e']
+
+Drill 2: Match a Digit
+
+Question: Match any single digit from 0-9.
+
+Text: 'I have 2 dogs and 1 cat.'
+
+Code:
+
+Python
+
+import re
+text = 'I have 2 dogs and 1 cat.'
+result = re.findall(r'\d', text)
+print(result)
+Explanation: The special sequence \d is a shortcut for the character class [0-9], matching any single digit.
+
+Output: ['2', '1']
+
+Drill 3: Match a Word Character
+
+Question: Match any single letter, digit, or underscore.
+
+Text: 'user_123 is here!'
+
+Code:
+
+Python
+
+import re
+text = 'user_123 is here!'
+result = re.findall(r'\w', text)
+print(result)
+Explanation: The special sequence \w is a shortcut for the character class [a-zA-Z0-9_], matching a single "word" character.
+
+Output: ['u', 's', 'e', 'r', '_', '1', '2', '3', 'i', 's', 'h', 'e', 'r', 'e']
+
+Drill 4: Match a Whitespace
+
+Question: Match any single space, tab, or newline character.
+
+Text: 'First line.\nSecond line.'
+
+Code:
+
+Python
+
+import re
+text = 'First line.\nSecond line.'
+result = re.findall(r'\s', text)
+print(result)
+Explanation: The special sequence \s is a shortcut for [ \t\n\r\f\v], matching any single whitespace character.
+
+Output: [' ', '\n', ' ']
+
+Drill 5: Match a Non-Digit
+
+Question: Match any single character that is not a digit.
+
+Text: 'The year is 2025.'
+
+Code:
+
+Python
+
+import re
+text = 'The year is 2025.'
+result = re.findall(r'\D', text)
+print(result)
+Explanation: The special sequence \D is the opposite of \d, matching any single character that is not a digit.
+
+Output: ['T', 'h', 'e', ' ', 'y', 'e', 'a', 'r', ' ', 'i', 's', ' ', '.']
+
+Drill 6: Match a Non-Word Character
+
+Question: Match any single character that is not a letter, digit, or underscore.
+
+Text: 'user_123 is here!'
+
+Code:
+
+Python
+
+import re
+text = 'user_123 is here!'
+result = re.findall(r'\W', text)
+print(result)
+Explanation: The special sequence \W is the opposite of \w, matching any single non-word character.
+
+Output: [' ', '!']
+
+Drill 7: Match a Non-Whitespace
+
+Question: Match any single character that is not a space, tab, or newline.
+
+Text: 'Hello world!'
+
+Code:
+
+Python
+
+import re
+text = 'Hello world!'
+result = re.findall(r'\S', text)
+print(result)
+Explanation: The special sequence \S is the opposite of \s, matching any single non-whitespace character.
+
+Output: ['H', 'e', 'l', 'l', 'o', 'w', 'o', 'r', 'l', 'd', '!']
+
+Drill 8: Match Any Character
+
+Question: Match any single character (except a newline).
+
+Text: 'A quick brown fox.'
+
+Code:
+
+Python
+
+import re
+text = 'A quick brown fox.'
+result = re.findall(r'.', text)
+print(result)
+Explanation: The metacharacter . matches any single character except a newline.
+
+Output: ['A', ' ', 'q', 'u', 'i', 'c', 'k', ' ', 'b', 'r', 'o', 'w', 'n', ' ', 'f', 'o', 'x', '.']
+
+Drill 9: Match a Punctuation
+
+Question: Match a single period ..
+
+Text: 'End of sentence.'
+
+Code:
+
+Python
+
+import re
+text = 'End of sentence.'
+result = re.findall(r'\.', text)
+print(result)
+Explanation: The metacharacter . has a special meaning. To match a literal period, you must escape it with a backslash: \..
+
+Output: ['.']
+
+Drill 10: Match a Specific Case
+
+Question: Match a single uppercase letter.
+
+Text: 'The quick Brown Fox Jumps.'
+
+Code:
+
+Python
+
+import re
+text = 'The quick Brown Fox Jumps.'
+result = re.findall(r'[A-Z]', text)
+print(result)
+Explanation: The character range [A-Z] matches any single uppercase letter from 'A' to 'Z'.
+
+Output: ['T', 'B', 'F', 'J']
+
+Drill Set 2: Character Classes
+Drill 11: Match a Set of Characters
+
+Question: Match any single character that is 'a', 'b', or 'c'.
+
+Text: 'The alphabet starts with a, b, c, d.'
+
+Code:
+
+Python
+
+import re
+text = 'The alphabet starts with a, b, c, d.'
+result = re.findall(r'[abc]', text)
+print(result)
+Explanation: The character class [abc] matches any single character that is 'a', 'b', or 'c'.
+
+Output: ['a', 'b', 'c']
+
+Drill 12: Match a Range of Characters
+
+Question: Match any single lowercase letter from 'h' to 'k'.
+
+Text: 'hij klmnop'
+
+Code:
+
+Python
+
+import re
+text = 'hij klmnop'
+result = re.findall(r'[h-k]', text)
+print(result)
+Explanation: The character range [h-k] matches any single character from 'h' to 'k'.
+
+Output: ['h', 'i', 'j', 'k']
+
+Drill 13: Match a Disjoint Range
+
+Question: Match any single character that is either a digit from 0-3 or a letter from 'x' to 'z'.
+
+Text: '123 abc 456 xyz'
+
+Code:
+
+Python
+
+import re
+text = '123 abc 456 xyz'
+result = re.findall(r'[0-3x-z]', text)
+print(result)
+Explanation: Multiple ranges and sets can be combined within a single character class, like [0-3x-z].
+
+Output: ['1', '2', '3', 'x', 'y', 'z']
+
+Drill 14: Negate a Character Set
+
+Question: Match any single character that is not 'a', 'e', 'i', 'o', or 'u'.
+
+Text: 'The quick brown fox.'
+
+Code:
+
+Python
+
+import re
+text = 'The quick brown fox.'
+result = re.findall(r'[^aeiou]', text)
+print(result)
+Explanation: The caret ^ at the beginning of a character class negates the set, matching any single character not in the set.
+
+Output: ['T', 'h', ' ', 'q', 'c', 'k', ' ', 'b', 'r', 'w', 'n', ' ', 'f', 'x', '.']
+
+Drill 15: Negate a Range
+
+Question: Match any single character that is not a digit from 0-5.
+
+Text: 'The numbers 1234567890.'
+
+Code:
+
+Python
+
+import re
+text = 'The numbers 1234567890.'
+result = re.findall(r'[^0-5]', text)
+print(result)
+Explanation: The negation operator ^ can also be used with character ranges.
+
+Output: ['T', 'h', 'e', ' ', 'n', 'u', 'm', 'b', 'e', 'r', 's', ' ', ' ', '6', '7', '8', '9', '0', '.']
+
+Drill 16: Match Multiple Ranges
+
+Question: Match any single uppercase letter or any single digit.
+
+Text: 'Hello World 12345!'
+
+Code:
+
+Python
+
+import re
+text = 'Hello World 12345!'
+result = re.findall(r'[A-Z0-9]', text)
+print(result)
+Explanation: Multiple character ranges, like A-Z and 0-9, can be combined in a single character class.
+
+Output: ['H', 'W', '1', '2', '3', '4', '5']
+
+Drill 17: Match a Set and a Range
+
+Question: Match any single character that is a comma , or a lowercase letter from 'a' to 'c'.
+
+Text: 'a,b,c,d,e,f'
+
+Code:
+
+Python
+
+import re
+text = 'a,b,c,d,e,f'
+result = re.findall(r'[,a-c]', text)
+print(result)
+Explanation: You can combine literal characters with character ranges inside a character class.
+
+Output: ['a', ',', 'b', ',', 'c']
+
+Drill 18: Match a Word with a Hyphen
+
+Question: Match any single character that is a word character or a hyphen -.
+
+Text: 'product-id_123'
+
+Code:
+
+Python
+
+import re
+text = 'product-id_123'
+result = re.findall(r'[\w-]', text)
+print(result)
+Explanation: You can combine a special sequence (\w) with a literal character (-) inside a character class.
+
+Output: ['p', 'r', 'o', 'd', 'u', 'c', 't', '-', 'i', 'd', '_', '1', '2', '3']
+
+Drill 19: Match a Consonant
+
+Question: Match any single character from the set [bcdfghjklmnpqrstvwxyz].
+
+Text: 'This is a test of character classes.'
+
+Code:
+
+Python
+
+import re
+text = 'This is a test of character classes.'
+result = re.findall(r'[bcdfghjklmnpqrstvwxyz]', text)
+print(result)
+Explanation: This pattern explicitly lists all lowercase consonants.
+
+Output: ['h', 's', 's', 't', 's', 't', 'f', 'c', 'h', 'r', 'c', 't', 'r', 'c', 'l', 's', 's', 's']
+
+Drill 20: Match a Digit or a Hyphen
+
+Question: Match any single digit or a hyphen -.
+
+Text: '123-456-7890'
+
+Code:
+
+Python
+
+import re
+text = '123-456-7890'
+result = re.findall(r'[\d-]', text)
+print(result)
+Explanation: This pattern combines the special sequence \d with the literal hyphen - inside a character class.
+
+Output: ['1', '2', '3', '-', '4', '5', '6', '-', '7', '8', '9', '0']
