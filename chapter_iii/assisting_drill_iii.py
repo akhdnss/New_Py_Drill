@@ -1,18 +1,16 @@
 import re
-#drill i
-# pattern = re.compile(r'\d{4}')
-# match = pattern.search("my pin is 3333")
-# print(f'match: {match.group()} ')
+# DRILL I 
+# string = "I have an apple and a banana"
+# pattern = re.compile(r'(apple|banana)')
+# match = pattern.findall(string)
+# print(match) 
 
-#drill ii
-# string = "Your order number is ABC-123-XYZ"
-# pattern = re.compile(r'([A-Z]{3})-([0-9]{3})-([A-Z]{3})')
-# match = pattern.search(string)
-# print(match.group(), "GROUP 1")
-# print(match.group(2), "GROUP 2")
-# print(match.groups(), "match groups")
+# string = "I love Python and also love python"
+# pattern = re.compile(r'(Python|python)')
+# match = pattern.findall(string)
+# print(match)
 
-# drill iii
-pattern = re.compile(r'\d{3}')
-match = re.findall(pattern, "the number is 123, 456, and 789")
+string = "My pets are a dog, a cat, and a bird."
+pattern = re.compile(r'(cat|dog|bird)')
+match = pattern.findall(string)
 print(match)
